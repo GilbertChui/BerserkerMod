@@ -10,17 +10,20 @@ import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import theberserker.cards.*;
+import theberserker.characters.TheBerserker;
 import theberserker.patches.AbstractCardEnum;
+import theberserker.patches.TheBerserkerEnum;
 
 @SpireInitializer
-public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber {
+public class BerserkerMod
+    implements EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber {
 
   // get the paths to the images of the card backgrounds
   private static final String ATTACK_ORANGE = makePath("512/bg_attack_orange.png");
   private static final String SKILL_ORANGE = makePath("512/bg_skill_orange.png");
   private static final String POWER_ORANGE = makePath("512/bg_power_orange.png");
   private static final String ORB_ORANGE = makePath("512/card_orange_orb.png");
-  
+
   private static final String ATTACK_ORANGE_PORTRAIT =
       makePath("resources/1024/bg_attack_orange.png");
   private static final String SKILL_ORANGE_PORTRAIT = makePath("1024/bg_skill_orange.png");
@@ -28,10 +31,11 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   private static final String ORB_ORANGE_PORTRAIT = makePath("1024/card_orange_orb.png");
   private static final Color ORANGE = CardHelper.getColor(255, 150, 0);
   private static final String BERSERKER_MOD_ASSETS_FOLDER = "img";
-  
+
   // berserker assets
   public static final String BERSERKER_PORTRAIT = "charSelect/berserkerPortrait.png";
-  
+  public static final String BERSERKER_BUTTON = "charSelect/berserkerButton.png";
+
   // get the paths to the images of the card art
   public static final String PLACEHOLDER_ART = makePath("cards/placeholder.png");
 
@@ -66,9 +70,10 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
 
   @Override
   public void receiveEditCharacters() {
-    //TODO: create portrait and select button create the logger method
-    //logger.info("begin edit characters");
-    //BaseMod.addCharacter(new TheBerserker(TheBerserker.NAME), selectButtonPath, makePath(BERSERKER_PORTRAIT), TheBerserkerEnum.BERSERKER);
+    // TODO: create the logger method
+    // logger.info("begin edit characters");
+    BaseMod.addCharacter(new TheBerserker(TheBerserker.NAME), makePath(BERSERKER_BUTTON),
+        makePath(BERSERKER_PORTRAIT), TheBerserkerEnum.THE_BERSERKER);
   }
-  
+
 }

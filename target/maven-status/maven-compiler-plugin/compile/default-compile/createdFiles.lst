@@ -1,5 +1,6 @@
 theberserker\cards\TestCard.class
 theberserker\patches\TheBerserkerEnum.class
 theberserker\patches\LibraryTypeEnum.class
-theberserker\The_Berserker.class
+theberserker\BerserkerMod.class
+theberserker\characters\TheBerserker.class
 theberserker\patches\AbstractCardEnum.class
