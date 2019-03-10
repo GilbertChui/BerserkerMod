@@ -27,8 +27,11 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   private static final String POWER_ORANGE_PORTRAIT = makePath("1024/bg_power_orange.png");
   private static final String ORB_ORANGE_PORTRAIT = makePath("1024/card_orange_orb.png");
   private static final Color ORANGE = CardHelper.getColor(255, 150, 0);
-  private static final String BERSERKER_MOD_ASSETS_FOLDER = "resources";
-
+  private static final String BERSERKER_MOD_ASSETS_FOLDER = "img";
+  
+  // berserker assets
+  public static final String BERSERKER_PORTRAIT = "charSelect/berserkerPortrait.png";
+  
   // get the paths to the images of the card art
   public static final String PLACEHOLDER_ART = makePath("cards/placeholder.png");
 
@@ -65,7 +68,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   public void receiveEditCharacters() {
     //TODO: create portrait and select button create the logger method
     //logger.info("begin edit characters");
-    //BaseMod.addCharacter(character, selectButtonPath, portraitPath, characterID);
+    //BaseMod.addCharacter(new TheBerserker(TheBerserker.NAME), selectButtonPath, makePath(BERSERKER_PORTRAIT), TheBerserkerEnum.BERSERKER);
   }
   
 }
