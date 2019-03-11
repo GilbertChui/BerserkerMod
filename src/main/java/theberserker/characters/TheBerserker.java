@@ -28,23 +28,29 @@ public class TheBerserker extends CustomPlayer {
   public static final int MAX_HP = 110;
   public static final int STARTING_GOLD = 99;
   public static final int HAND_SIZE = 5;
-  // TODO: make the following variables point to their respective paths
-  public static final String THE_BERSERKER_SHOULDER_2 = "";
-  public static final String THE_BERSERKER_SHOULDER_1 = "";
-  public static final String THE_BERSERKER_CORPSE = "";
+  public static final String THE_BERSERKER_SHOULDER_2 = "img/char/theBerserker/theBerserkerShoulder2.png";
+  public static final String THE_BERSERKER_SHOULDER_1 = "img/char/theBerserker/theBerserkerShoulder1.png";
+  public static final String THE_BERSERKER_CORPSE = "img/char/theBerserker/theBerserkerCorpse.png";
   // public static final String THE_BERSERKER_SKELETON_ATLAS = "";
   // public static final String THE_BERSERKER_SKELETON_JSON = "";
-  public static final String[] ENERGY_ORB = {"", "", "", "", "", "", "", "", "", "", ""};
-  public static final String ORB_VFX_PATH = "";
-  public static final float[] LAYER_SPEEDS = {0,0,0,0,0,0,0,0,0,0,0};
-  public static final SpriterAnimation ANIMATION = new SpriterAnimation("filepath"); //should point to a spriter animation
-  
+  public static final String[] ENERGY_ORB = {"img/char/theBerserker/orb/orb1.png",
+      "img/char/theBerserker/orb/orb2.png", "img/char/theBerserker/orb/orb3.png",
+      "img/char/theBerserker/orb/orb4.png", "img/char/theBerserker/orb/orb5.png",
+      "img/char/theBerserker/orb/orb6.png", "img/char/theBerserker/orb/orb1d.png",
+      "img/char/theBerserker/orb/orb2d.png", "img/char/theBerserker/orb/orb3d.png",
+      "img/char/theBerserker/orb/orb4d.png", "img/char/theBerserker/orb/orb5d.png"};
+  public static final String ORB_VFX_PATH = "img/char/theBerserker/orb/vfx.png";
+  public static final float[] LAYER_SPEEDS = {1, 2, 1, 3, 2, 0, 0, 0, 0, 0, 0};
+  public static final SpriterAnimation ANIMATION = new SpriterAnimation("img/char/theBerserker/animation.spriter"); // should point
+                                                                                     // to a spriter
+                                                                                     // animation
+
   public TheBerserker(String name) {
     // TODO: point the following variables to their respective paths and values:
     // ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION
-    //super(name, TheBerserkerEnum.THE_BERSERKER, energyOrb, name, name, name);
+    // super(name, TheBerserkerEnum.THE_BERSERKER, energyOrb, name, name, name);
     super(NAME, TheBerserkerEnum.THE_BERSERKER, ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION);
-    this.dialogX = (this.drawX + 0.0F * Settings.scale); //set the dialog boxes for the character
+    this.dialogX = (this.drawX + 0.0F * Settings.scale); // set the dialog boxes for the character
     this.dialogY = (this.drawY + 220.0F * Settings.scale);
 
     initializeClass(null, THE_BERSERKER_SHOULDER_2, THE_BERSERKER_SHOULDER_1, THE_BERSERKER_CORPSE,
@@ -67,7 +73,7 @@ public class TheBerserker extends CustomPlayer {
   }
 
   public ArrayList<String> getStartingRelics() {
-    //TODO: make rock relic
+    // TODO: make rock relic
     ArrayList<String> relics = new ArrayList<>();
     relics.add("ROCK");
     UnlockTracker.markRelicAsSeen("ROCK");
@@ -77,6 +83,7 @@ public class TheBerserker extends CustomPlayer {
   public CharSelectInfo getLoadout() {
     return new CharSelectInfo("The Berserker", "ARG", STARTING_HP, MAX_HP, 0, STARTING_GOLD,
         HAND_SIZE, this, getStartingRelics(), getStartingDeck(), false);
+    
   }
 
   @Override
