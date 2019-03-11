@@ -3,8 +3,6 @@ package theberserker.characters;
 import java.util.ArrayList;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,6 +16,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpriterAnimation;
 import theberserker.patches.AbstractCardEnum;
 import theberserker.patches.TheBerserkerEnum;
 
@@ -25,32 +24,32 @@ public class TheBerserker extends CustomPlayer {
 
   public static final String NAME = "The Berserker";
   public static final int ENERGY_PER_TURN = 3;
-  public static final int STARTING_HP = 120;
-  public static final int MAX_HP = 120;
+  public static final int STARTING_HP = 110;
+  public static final int MAX_HP = 110;
   public static final int STARTING_GOLD = 99;
   public static final int HAND_SIZE = 5;
   // TODO: make the following variables point to their respective paths
   public static final String THE_BERSERKER_SHOULDER_2 = "";
   public static final String THE_BERSERKER_SHOULDER_1 = "";
   public static final String THE_BERSERKER_CORPSE = "";
-  public static final String THE_BERSERKER_SKELETON_ATLAS = "";
-  public static final String THE_BERSERKER_SKELETON_JSON = "";
-  public static final String[] energyOrb = {"", "", "", "", "", "", "", "", "", "", ""};
-
+  // public static final String THE_BERSERKER_SKELETON_ATLAS = "";
+  // public static final String THE_BERSERKER_SKELETON_JSON = "";
+  public static final String[] ENERGY_ORB = {"", "", "", "", "", "", "", "", "", "", ""};
+  public static final String ORB_VFX_PATH = "";
+  public static final float[] LAYER_SPEEDS = {0,0,0,0,0,0,0,0,0,0,0};
+  public static final SpriterAnimation ANIMATION = new SpriterAnimation("filepath"); //should point to a spriter animation
+  
   public TheBerserker(String name) {
-    // TODO: replace name with the respective paths: path to orb vfx.png
-    // path to berserker.g3dj, Berserker_Render|idle
-    super(name, TheBerserkerEnum.THE_BERSERKER, energyOrb, name, name, name);
-    this.dialogX = (this.drawX + 0.0F * Settings.scale);
+    // TODO: point the following variables to their respective paths and values:
+    // ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION
+    //super(name, TheBerserkerEnum.THE_BERSERKER, energyOrb, name, name, name);
+    super(NAME, TheBerserkerEnum.THE_BERSERKER, ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION);
+    this.dialogX = (this.drawX + 0.0F * Settings.scale); //set the dialog boxes for the character
     this.dialogY = (this.drawY + 220.0F * Settings.scale);
 
     initializeClass(null, THE_BERSERKER_SHOULDER_2, THE_BERSERKER_SHOULDER_1, THE_BERSERKER_CORPSE,
         getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
 
-    loadAnimation(THE_BERSERKER_SKELETON_ATLAS, THE_BERSERKER_SKELETON_JSON, 1.0F);
-
-    AnimationState.TrackEntry e = this.state.setAnimation(0, "animation", true);
-    e.setTime(e.getEndTime() * MathUtils.random());
   }
 
   public ArrayList<String> getStartingDeck() {
@@ -68,6 +67,7 @@ public class TheBerserker extends CustomPlayer {
   }
 
   public ArrayList<String> getStartingRelics() {
+    //TODO: make rock relic
     ArrayList<String> relics = new ArrayList<>();
     relics.add("ROCK");
     UnlockTracker.markRelicAsSeen("ROCK");
@@ -88,7 +88,7 @@ public class TheBerserker extends CustomPlayer {
 
   @Override
   public int getAscensionMaxHPLoss() {
-    return 4;
+    return 10;
   }
 
   @Override
@@ -156,7 +156,7 @@ public class TheBerserker extends CustomPlayer {
     return "Navigating an unlit street, you come across several hooded figures in the midst"
         + " of some dark ritual. As you approach, they turn to you in eerie unison. The "
         + "tallest among them bares fanged teeth and extends a long, pale hand towards you. "
-        + "NL ~\"Join~ ~us,~ ~oh Mighty Warrior,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~"
+        + "NL ~\"Join~ ~us,~ ~oh One of Never Ending Rage,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~"
         + " ~Spire.\"~";
   }
 
