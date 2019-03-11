@@ -1,6 +1,10 @@
 package theberserker;
 
 
+import java.nio.charset.StandardCharsets;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -17,7 +21,10 @@ import theberserker.patches.TheBerserkerEnum;
 @SpireInitializer
 public class BerserkerMod
     implements EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber {
-
+  
+  // create a logger for debugging purposes
+  Logger logger = LogManager.getLogger(BerserkerMod.class.getName());
+  
   // get the paths to the images of the card backgrounds
   private static final String ATTACK_ORANGE = makePath("512/bg_attack_orange.png");
   private static final String SKILL_ORANGE = makePath("512/bg_skill_orange.png");
@@ -44,6 +51,7 @@ public class BerserkerMod
     // note: use savable if you want to save a value in a relic/card ie: like the
     // pen nib
     // Adding orange as a color
+    logger.info("creating color " + AbstractCardEnum.ORANGE.toString());
     BaseMod.addColor(AbstractCardEnum.ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE,
         ORANGE, ATTACK_ORANGE, SKILL_ORANGE, POWER_ORANGE, ORB_ORANGE, ATTACK_ORANGE_PORTRAIT,
         SKILL_ORANGE_PORTRAIT, POWER_ORANGE_PORTRAIT, ORB_ORANGE_PORTRAIT);
@@ -55,8 +63,12 @@ public class BerserkerMod
 
   @Override
   public void receiveEditStrings() {
-    // TODO load the custom strings to the file.
-    BaseMod.loadCustomStringsFile(CardStrings.class, "");
+    logger.info("begin editting strings");
+    logger.info("adding card strings for " + TheBerserkerEnum.THE_BERSERKER.toString());
+    String cardStrings = Gdx.files.internal("localization/BerserkerModCardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+    BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+    
+    logger.info("finished editting strings");
   }
 
   public static final String makePath(String path) {
@@ -65,15 +77,19 @@ public class BerserkerMod
 
   @Override
   public void receiveEditCards() {
+    logger.info("begin editting cards");
+    logger.info("adding cards for " + TheBerserkerEnum.THE_BERSERKER.toString());
     BaseMod.addCard(new TestCard());
+    logger.info("finished editting cards");
   }
 
   @Override
   public void receiveEditCharacters() {
-    // TODO: create the logger method
-    // logger.info("begin edit characters");
+    logger.info("begin editting characters");
+    logger.info("add " + TheBerserkerEnum.THE_BERSERKER.toString());
     BaseMod.addCharacter(new TheBerserker(TheBerserker.NAME), makePath(BERSERKER_BUTTON),
         makePath(BERSERKER_PORTRAIT), TheBerserkerEnum.THE_BERSERKER);
+    logger.info("finished editting characters");
   }
 
 }

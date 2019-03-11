@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>examplemod</groupId>
-    <artifactId>examplemod</artifactId>
+    <groupId>BerserkerMod</groupId>
+    <artifactId>BerserkerMod</artifactId>
     <version>v1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>ExampleMod</name>
+    <name>BerserkerMod</name>
     <description>Attempting to make a mod!</description>
 
     <dependencies>
@@ -34,7 +34,7 @@
     </dependencies>
 
     <build>
-        <finalName>ExampleMod</finalName>
+        <finalName>BerserkerMod</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -54,7 +54,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target/ExampleMod.jar" tofile="../lib/TheBerserker.jar"/>
+                                <copy file="target/BerserkerMod.jar" tofile="../lib/BerserkerMod.jar"/>
                             </target>
                         </configuration>
                         <goals>
