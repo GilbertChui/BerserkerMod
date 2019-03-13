@@ -51,6 +51,7 @@ public class BerserkerMod
     // note: use savable if you want to save a value in a relic/card ie: like the
     // pen nib
     // Adding orange as a color
+    BaseMod.subscribe(this);
     logger.info("creating color " + AbstractCardEnum.ORANGE.toString());
     BaseMod.addColor(AbstractCardEnum.ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE,
         ORANGE, ATTACK_ORANGE, SKILL_ORANGE, POWER_ORANGE, ORB_ORANGE, ATTACK_ORANGE_PORTRAIT,

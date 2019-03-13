@@ -40,8 +40,8 @@ public class TheBerserker extends CustomPlayer {
       "img/char/theBerserker/orb/orb2d.png", "img/char/theBerserker/orb/orb3d.png",
       "img/char/theBerserker/orb/orb4d.png", "img/char/theBerserker/orb/orb5d.png"};
   public static final String ORB_VFX_PATH = "img/char/theBerserker/orb/vfx.png";
-  public static final float[] LAYER_SPEEDS = {1, 2, 1, 3, 2, 0, 0, 0, 0, 0, 0};
-  public static final SpriterAnimation ANIMATION = new SpriterAnimation("img/char/theBerserker/animation.spriter"); // should point
+  public static final float[] LAYER_SPEEDS = {1, 2, 1, 3, 2, 1, 1, 1, 1, 1, 1};
+  public static final SpriterAnimation ANIMATION = new SpriterAnimation("img/char/theBerserker/placeholder.scml"); // should point
                                                                                      // to a spriter
                                                                                      // animation
 
@@ -88,7 +88,7 @@ public class TheBerserker extends CustomPlayer {
 
   @Override
   public void doCharSelectScreenSelectEffect() {
-    CardCrawlGame.sound.playA("ATTACK_HEAVY", 0);
+    CardCrawlGame.sound.playA("ATTACK_HEAVY", -.2f);
     CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.MED,
         true);
   }

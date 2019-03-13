@@ -12,7 +12,7 @@ import theberserker.patches.AbstractCardEnum;
 
 public class TestCard extends CustomCard {
 
-  public static final String ID = "the_berserker:TestCard";
+  public static final String ID = "TestCard";
   public static final String NAME = "Test Card";
   public static final String DESCRIPTION = "Deal !D! damage";
   private static final int COST = 0;
@@ -21,15 +21,15 @@ public class TestCard extends CustomCard {
 
   // TODO: make texture for orb n shit
   public TestCard() {
-    super(ID, NAME, BerserkerMod.makePath(BerserkerMod.PLACEHOLDER_ART), COST, DESCRIPTION,
-        AbstractCard.CardType.ATTACK, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON,
-        AbstractCard.CardTarget.ENEMY);
+    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION,
+       AbstractCard.CardType.ATTACK, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC,
+       AbstractCard.CardTarget.ENEMY);
+
     this.damage = this.baseDamage = ATTACK_DMG;
   }
 
   @Override
   public void upgrade() {
-    // TODO Auto-generated method stub
     if (!this.upgraded) {
       this.upgradeName();
       this.upgradeDamage(UPGRADE_PLUS_DMG);

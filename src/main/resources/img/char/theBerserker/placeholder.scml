@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0">
+        <file id="0" name="placeholder.png" width="512" height="512" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <obj_info name="bone_000" type="bone" w="374.001" h="10"/>
+        <animation id="0" name="NewAnimation" length="1000" interval="100">
+            <mainline>
+                <key id="0">
+                    <bone_ref id="0" timeline="1" key="0"/>
+                    <object_ref id="0" parent="0" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="297">
+                    <bone_ref id="0" timeline="1" key="1"/>
+                    <object_ref id="0" parent="0" timeline="0" key="1" z_index="0"/>
+                </key>
+                <key id="2" time="496">
+                    <bone_ref id="0" timeline="1" key="1"/>
+                    <object_ref id="0" parent="0" timeline="0" key="2" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="placeholder">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="414.586753" y="218.892266" angle="269.846803"/>
+                </key>
+                <key id="1" time="297" spin="0">
+                    <object folder="0" file="0" x="415.833407" y="217.638928" angle="269.846803"/>
+                </key>
+                <key id="2" time="496" spin="0">
+                    <object folder="0" file="0" x="878.920432" y="214.854678" angle="269.846803"/>
+                </key>
+            </timeline>
+            <timeline id="1" obj="0" name="bone_000" object_type="bone">
+                <key id="0" spin="0">
+                    <bone x="-29" y="-149" angle="90.153197"/>
+                </key>
+                <key id="1" time="297" spin="0">
+                    <bone x="-191.5" y="-455.25" angle="90.153197" scale_y="0.2"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
