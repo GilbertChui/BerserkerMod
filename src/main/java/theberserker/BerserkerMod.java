@@ -80,7 +80,13 @@ public class BerserkerMod
   public void receiveEditCards() {
     logger.info("begin editting cards");
     logger.info("adding cards for " + TheBerserkerEnum.THE_BERSERKER.toString());
-    BaseMod.addCard(new TestCard());
+    //Basic Cards
+    BaseMod.addCard(new StrikeB());
+    BaseMod.addCard(new Regeneration());
+    
+    //Skills
+    BaseMod.addCard(new NoPainNoGain());
+    
     logger.info("finished editting cards");
   }
 

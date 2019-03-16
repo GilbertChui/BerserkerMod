@@ -1,6 +1,14 @@
 {
-	"TestCard": {
-		"NAME": "TestCard",
+	"StrikeB": {
+		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Regeneration": {
+		"NAME": "Regeneration",
+		"DESCRIPTION": "Lose !M! HP. Gain !M! Regen."
+	},
+	"NoPainNoGain": {
+		"NAME": "No Pain No Gain",
+		"DESCRIPTION": "Lose 5 HP. Draw !M! cards."
 	}
 }
