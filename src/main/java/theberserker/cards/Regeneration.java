@@ -20,7 +20,7 @@ public class Regeneration extends CustomCard {
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   private static final int COST = 1;
-  private static final int REGEN_AMT = 2;
+  private static final int REGEN_AMT = 3;
   private static final int UPGRADE_PLUS_HEALTH = 1;
 
   public Regeneration() {
@@ -43,7 +43,7 @@ public class Regeneration extends CustomCard {
     AbstractDungeon.actionManager
         .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, magicNumber), REGEN_AMT));
     AbstractDungeon.actionManager
-        .addToBottom(new DamageAction(p, new DamageInfo(p, magicNumber, this.damageTypeForTurn)));
+        .addToBottom(new DamageAction(p, new DamageInfo(p, 2, this.damageTypeForTurn)));
   }
 
   @Override

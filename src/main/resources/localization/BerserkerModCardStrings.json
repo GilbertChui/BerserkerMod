@@ -5,10 +5,18 @@
 	},
 	"Regeneration": {
 		"NAME": "Regeneration",
-		"DESCRIPTION": "Lose !M! HP. Gain !M! Regen."
+		"DESCRIPTION": "Lose 2 HP. Gain !M! Regen."
 	},
 	"NoPainNoGain": {
 		"NAME": "No Pain No Gain",
 		"DESCRIPTION": "Lose 5 HP. Draw !M! cards."
+	},
+	"RecklessCleave":{
+		"NAME":"Reckless Cleave",
+		"DESCRIPTION": "Lose !M! HP. Deal !D! damage to a target then deal !D! damage to all enemies"
+	},
+	"AxeAQuestion":{
+		"NAME":"Axe A Question",
+		"DESCRIPTION": "IDK WHAT THIS DOES YET"
 	}
 }

@@ -72,7 +72,7 @@ public class TheBerserker extends CustomPlayer {
     deck.add("Regeneration");
     deck.add("Regeneration");
     deck.add("Regeneration");
-    deck.add("NoPainNoGain");
+    deck.add("RecklessCleave");
     return deck;
   }
 
@@ -92,7 +92,7 @@ public class TheBerserker extends CustomPlayer {
 
   @Override
   public void doCharSelectScreenSelectEffect() {
-    CardCrawlGame.sound.playA("ATTACK_HEAVY", -.2f);
+    CardCrawlGame.sound.playA("ATTACK_HEAVY", -.5f);
     CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.HIGH, ScreenShake.ShakeDur.MED,
         true);
   }

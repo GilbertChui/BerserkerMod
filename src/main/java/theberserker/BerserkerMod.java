@@ -87,6 +87,10 @@ public class BerserkerMod
     //Skills
     BaseMod.addCard(new NoPainNoGain());
     
+    //Attacks
+    BaseMod.addCard(new RecklessCleave());
+    BaseMod.addCard(new AxeAQuestion());
+    
     logger.info("finished editting cards");
   }
 
