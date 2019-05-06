@@ -83,13 +83,24 @@ public class BerserkerMod
     //Basic Cards
     BaseMod.addCard(new StrikeB());
     BaseMod.addCard(new Regeneration());
-    
-    //Skills
-    BaseMod.addCard(new NoPainNoGain());
-    
-    //Attacks
     BaseMod.addCard(new RecklessCleave());
+    
+    //TESTCARD
+    BaseMod.addCard(new TestCard());
+    
+    //Common
+    BaseMod.addCard(new GreaterCleave());
+    BaseMod.addCard(new Rampage());
+    
+    //Uncommon
+    BaseMod.addCard(new NoPainNoGain());
     BaseMod.addCard(new AxeAQuestion());
+    BaseMod.addCard(new QuickFix());
+     
+    //Rare
+    BaseMod.addCard(new Panic());
+    BaseMod.addCard(new Revenge());
+    BaseMod.addCard(new WhirlwindOfDeath());
     
     logger.info("finished editting cards");
   }

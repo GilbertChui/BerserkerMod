@@ -13,21 +13,18 @@ import basemod.abstracts.CustomCard;
 import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
-public class RecklessCleave extends CustomCard {
-
-  public static final String ID = "RecklessCleave";
+public class TestCard extends CustomCard{
+  public static final String ID = "TestCard";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  private static final int SELF_DMG = 5;
-  private static final int COST = 1;
-  private static final int ATTACK_DMG = 5;
+  private static final int COST = 0;
+  private static final int ATTACK_DMG = 5000;
   private static final int UPGRADE_PLUS_DMG = 3;
 
-  public RecklessCleave() {
+  public TestCard() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
-    this.magicNumber = this.baseMagicNumber = SELF_DMG;
+        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
     this.damage = this.baseDamage = ATTACK_DMG;
   }
 
@@ -42,8 +39,7 @@ public class RecklessCleave extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager
-        .addToBottom(new DamageAction(p, new DamageInfo(p, magicNumber, this.damageTypeForTurn)));
+    
     for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
       AbstractDungeon.actionManager
           .addToBottom(new DamageAction(mo, new DamageInfo(p, this.damage, this.damageTypeForTurn),
@@ -56,6 +52,6 @@ public class RecklessCleave extends CustomCard {
 
   @Override
   public AbstractCard makeCopy() {
-    return new RecklessCleave();
+    return new TestCard();
   }
 }

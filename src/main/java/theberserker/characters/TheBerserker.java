@@ -44,7 +44,7 @@ public class TheBerserker extends CustomPlayer {
   public static final String ORB_VFX_PATH = "img/char/theBerserker/orb/vfx.png";
   public static final float[] LAYER_SPEEDS = {1, 2, 1, 3, 2, 1, 1, 1, 1, 1, 1};
   public static final SpriterAnimation ANIMATION =
-      new SpriterAnimation("img/char/theBerserker/placeholder.scml"); // should point
+      new SpriterAnimation("img/char/theBerserker/berserker.scml"); // should point
   // to a spriter
   // animation
 
@@ -67,8 +67,8 @@ public class TheBerserker extends CustomPlayer {
     deck.add("StrikeB");
     deck.add("StrikeB");
     deck.add("StrikeB");
-    deck.add("StrikeB");
-    deck.add("StrikeB");
+    deck.add("QuickFix");
+    deck.add("TestCard");
     deck.add("Regeneration");
     deck.add("Regeneration");
     deck.add("Regeneration");

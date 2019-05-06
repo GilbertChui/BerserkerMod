@@ -1,12 +1,14 @@
 package theberserker.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import basemod.abstracts.CustomCard;
 import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
@@ -22,14 +24,17 @@ public class AxeAQuestion extends CustomCard {
   
   public AxeAQuestion(){
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
     this.baseMagicNumber = this.magicNumber = DEBUFF_AMT;
   }
   
   @Override
   public void use( AbstractPlayer p, AbstractMonster m) {
     //TODO: figure out what this card does.
-    AbstractDungeon.actionManager.addToBottom();
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m ,this.magicNumber, false), this.magicNumber));
+    
+    //TODO: some interesting garbage with this
+    this.magicNumber = GameActionManager.hpLossThisCombat;
   }
 
   @Override

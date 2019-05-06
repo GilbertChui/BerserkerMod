@@ -5,18 +5,49 @@
 	},
 	"Regeneration": {
 		"NAME": "Regeneration",
-		"DESCRIPTION": "Lose 2 HP. Gain !M! Regen."
-	},
-	"NoPainNoGain": {
-		"NAME": "No Pain No Gain",
-		"DESCRIPTION": "Lose 5 HP. Draw !M! cards."
+		"DESCRIPTION": "Gain !M! Regen. Exhaust"
 	},
 	"RecklessCleave":{
 		"NAME":"Reckless Cleave",
 		"DESCRIPTION": "Lose !M! HP. Deal !D! damage to a target then deal !D! damage to all enemies"
 	},
+	"GreaterCleave":{
+		"NAME":"Greater Cleave",
+		"DESCRIPTION": "Deal !D! damage to all enemies twice."
+	},
+	"Rampage":{
+	"NAME":"RAMPAGE",
+	"DESCRIPTION":"Lose 3 HP. Draw a card. Deal !D! damage."
+	},
+	"QuickFix":{
+	"NAME":"Quick Fix",
+	"DESCRIPTION":"Gain !M! Regen. Shuffle 2 Wounds into your drawpile.",
+	"UPGRADE_DESCRIPTION": "Gain !M! Regen."
+	},
+	"NoPainNoGain": {
+		"NAME": "No Pain No Gain",
+		"DESCRIPTION": "Lose 5 HP. Draw !M! cards."
+	},
 	"AxeAQuestion":{
 		"NAME":"Axe A Question",
 		"DESCRIPTION": "IDK WHAT THIS DOES YET"
+	},
+	"Panic":{
+		"NAME":"Panic",
+		"DESCRIPTION": "Shuffle 5 Dazed into your drawpile. Gain !M! Regen."
+	},
+	"Revenge":{
+		"NAME":"Revenge",
+		"DESCRIPTION": "Deal damage equal to life lost this combat",
+		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
+	},
+	"WhirlwindOfDeath":{
+		"NAME":"Whirlwind Of Death",
+		"DESCRIPTION": "DOES SOMETHING",
+		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
+	},
+	"TestCard":{
+	"NAME":"TestCard",
+	"DESCRIPTION":"for testing purposes only"
 	}
 }
