@@ -142,8 +142,8 @@ public class TheBerserker extends CustomPlayer {
     return new AbstractGameAction.AttackEffect[] {AbstractGameAction.AttackEffect.BLUNT_HEAVY,
         AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.SLASH_HEAVY,
         AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.SMASH,
-        AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.SMASH,
-        AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.SMASH};
+        AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.SMASH,
+        AbstractGameAction.AttackEffect.SMASH, AbstractGameAction.AttackEffect.BLUNT_HEAVY};
   }
 
   @Override
@@ -167,7 +167,7 @@ public class TheBerserker extends CustomPlayer {
     return "Navigating an unlit street, you come across several hooded figures in the midst"
         + " of some dark ritual. As you approach, they turn to you in eerie unison. The "
         + "tallest among them bares fanged teeth and extends a long, pale hand towards you. "
-        + "NL ~\"Join~ ~us,~ ~oh One of Never Ending Rage,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~"
+        + "NL ~\"Join~ ~us,~ ~oh one of never ending rage,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~"
         + " ~Spire.\"~";
   }
 

@@ -30,7 +30,7 @@
 	},
 	"AxeAQuestion":{
 		"NAME":"Axe A Question",
-		"DESCRIPTION": "IDK WHAT THIS DOES YET"
+		"DESCRIPTION": "Applies !M! Weak and Vulnerable to target."
 	},
 	"Panic":{
 		"NAME":"Panic",

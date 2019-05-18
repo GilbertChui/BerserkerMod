@@ -27,6 +27,7 @@ public class GreaterCleave extends CustomCard{
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
     this.damage = this.baseDamage = ATTACK_DMG;
     this.damageType = DamageInfo.DamageType.NORMAL;
+    this.isMultiDamage = true;
   }
   
   @Override
