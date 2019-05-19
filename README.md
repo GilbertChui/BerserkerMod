@@ -1,2 +1,4 @@
 # TheBerserker
-It's a Slay The Spire mod
+
+A WIP StS mod
+
