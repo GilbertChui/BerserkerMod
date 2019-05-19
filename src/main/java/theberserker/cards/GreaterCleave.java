@@ -14,7 +14,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class GreaterCleave extends CustomCard{
-  public static final String ID = "GreaterCleave";
+  public static final String ID = "theBerserker:GreaterCleave";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;

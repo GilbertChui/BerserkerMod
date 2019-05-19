@@ -16,7 +16,7 @@ import theberserker.patches.AbstractCardEnum;
 
 
 public class Revenge extends CustomCard{
-  public static final String ID = "Revenge";
+  public static final String ID = "theBerserker:Revenge";
   public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;

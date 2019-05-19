@@ -12,7 +12,7 @@ import theberserker.patches.AbstractCardEnum;
 
 public class StrikeB extends CustomCard {
 
-  public static final String ID = "StrikeB";
+  public static final String ID = "theBerserker:StrikeB";
   public static final String NAME = "Strike";
   public static final String DESCRIPTION = "Deal !D! damage";
   private static final int COST = 1;

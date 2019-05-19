@@ -1,52 +1,52 @@
 {
-	"StrikeB": {
+	"theBerserker:StrikeB": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
 	},
-	"Regeneration": {
+	"theBerserker:Regeneration": {
 		"NAME": "Regeneration",
 		"DESCRIPTION": "Gain !M! Regen. Exhaust"
 	},
-	"RecklessCleave":{
+	"theBerserker:RecklessCleave":{
 		"NAME":"Reckless Cleave",
 		"DESCRIPTION": "Lose !M! HP. Deal !D! damage to a target then deal !D! damage to all enemies"
 	},
-	"GreaterCleave":{
+	"theBerserker:GreaterCleave":{
 		"NAME":"Greater Cleave",
 		"DESCRIPTION": "Deal !D! damage to all enemies twice."
 	},
-	"Rampage":{
+	"theBerserker:Rampage":{
 	"NAME":"RAMPAGE",
 	"DESCRIPTION":"Lose 3 HP. Draw a card. Deal !D! damage."
 	},
-	"QuickFix":{
+	"theBerserker:QuickFix":{
 	"NAME":"Quick Fix",
 	"DESCRIPTION":"Gain !M! Regen. Shuffle 2 Wounds into your drawpile.",
 	"UPGRADE_DESCRIPTION": "Gain !M! Regen."
 	},
-	"NoPainNoGain": {
+	"theBerserker:NoPainNoGain": {
 		"NAME": "No Pain No Gain",
 		"DESCRIPTION": "Lose 5 HP. Draw !M! cards."
 	},
-	"AxeAQuestion":{
+	"theBerserker:AxeAQuestion":{
 		"NAME":"Axe A Question",
 		"DESCRIPTION": "Applies !M! Weak and Vulnerable to target."
 	},
-	"Panic":{
+	"theBerserker:Panic":{
 		"NAME":"Panic",
 		"DESCRIPTION": "Shuffle 5 Dazed into your drawpile. Gain !M! Regen."
 	},
-	"Revenge":{
+	"theBerserker:Revenge":{
 		"NAME":"Revenge",
 		"DESCRIPTION": "Deal damage equal to life lost this combat",
 		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
 	},
-	"WhirlwindOfDeath":{
+	"theBerserker:WhirlwindOfDeath":{
 		"NAME":"Whirlwind Of Death",
 		"DESCRIPTION": "DOES SOMETHING",
 		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
 	},
-	"TestCard":{
+	"theBerserker:TestCard":{
 	"NAME":"TestCard",
 	"DESCRIPTION":"for testing purposes only"
 	}

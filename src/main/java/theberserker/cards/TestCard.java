@@ -14,7 +14,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class TestCard extends CustomCard{
-  public static final String ID = "TestCard";
+  public static final String ID = "theBerserker:TestCard";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;

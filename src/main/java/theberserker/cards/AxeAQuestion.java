@@ -14,7 +14,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class AxeAQuestion extends CustomCard {
-  public static final String ID = "AxeAQuestion";
+  public static final String ID = "theBerserker:AxeAQuestion";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   private static final String NAME = cardString.NAME;
   private static final int COST = 1;

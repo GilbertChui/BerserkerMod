@@ -16,7 +16,7 @@ import theberserker.patches.AbstractCardEnum;
 
 public class Panic extends CustomCard{
   
-  static final String ID = "Panic";
+  static final String ID = "theBerserker:Panic";
   public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;

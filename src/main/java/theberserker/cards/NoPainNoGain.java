@@ -14,7 +14,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class NoPainNoGain extends CustomCard {
-  public static final String ID = "NoPainNoGain";
+  public static final String ID = "theBerserker:NoPainNoGain";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
