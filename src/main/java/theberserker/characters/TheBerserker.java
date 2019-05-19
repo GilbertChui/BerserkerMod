@@ -49,9 +49,6 @@ public class TheBerserker extends CustomPlayer {
   // animation
 
   public TheBerserker(String name) {
-    // TODO: point the following variables to their respective paths and values:
-    // ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION
-    // super(name, TheBerserkerEnum.THE_BERSERKER, energyOrb, name, name, name);
     super(NAME, TheBerserkerEnum.THE_BERSERKER, ENERGY_ORB, ORB_VFX_PATH, LAYER_SPEEDS, ANIMATION);
     this.dialogX = (this.drawX + 0.0F * Settings.scale); // set the dialog boxes for the character
     this.dialogY = (this.drawY + 220.0F * Settings.scale);
@@ -63,16 +60,16 @@ public class TheBerserker extends CustomPlayer {
 
   public ArrayList<String> getStartingDeck() {
     ArrayList<String> deck = new ArrayList<>();
-    deck.add("StrikeB");
-    deck.add("StrikeB");
-    deck.add("StrikeB");
-    deck.add("StrikeB");
-    deck.add("QuickFix");
-    deck.add("TestCard");
-    deck.add("Regeneration");
-    deck.add("Regeneration");
-    deck.add("Regeneration");
-    deck.add("RecklessCleave");
+    deck.add("theBerserker:StrikeB");
+    deck.add("theBerserker:StrikeB");
+    deck.add("theBerserker:StrikeB");
+    deck.add("theBerserker:StrikeB");
+    deck.add("theBerserker:QuickFix");
+    deck.add("theBerserker:TestCard");
+    deck.add("theBerserker:Regeneration");
+    deck.add("theBerserker:Regeneration");
+    deck.add("theBerserker:Regeneration");
+    deck.add("theBerserker:Regeneration");
     return deck;
   }
 

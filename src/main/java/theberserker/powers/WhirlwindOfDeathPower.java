@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
+import static theberserker.BerserkerMod.getPlaceholderPowerTexture;;
 
 public class WhirlwindOfDeathPower extends AbstractPower {
   
@@ -18,13 +19,14 @@ public class WhirlwindOfDeathPower extends AbstractPower {
   public static final String POWER_ID = "WhirlwindOfDeathPower";
   public static final String NAME = "Whirlwind of Death";
   public static final String[] DESCRIPTIONS = new String[] {"Deal 6 damage to all enemies when you play a card."};
-  
+ 
   public WhirlwindOfDeathPower(final AbstractCreature owner, int amount) {
     this.name = NAME;
     this.ID = POWER_ID;
     this.owner = owner;
     this.amount = amount;
     this.type = AbstractPower.PowerType.BUFF;
+    this.img = getPlaceholderPowerTexture();
   }
   
   @Override

@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -32,7 +33,7 @@ public class BerserkerMod
   private static final String ORB_ORANGE = makePath("512/card_orange_orb.png");
 
   private static final String ATTACK_ORANGE_PORTRAIT =
-      makePath("resources/1024/bg_attack_orange.png");
+      makePath("1024/bg_attack_orange.png");
   private static final String SKILL_ORANGE_PORTRAIT = makePath("1024/bg_skill_orange.png");
   private static final String POWER_ORANGE_PORTRAIT = makePath("1024/bg_power_orange.png");
   private static final String ORB_ORANGE_PORTRAIT = makePath("1024/card_orange_orb.png");
@@ -74,6 +75,18 @@ public class BerserkerMod
 
   public static final String makePath(String path) {
     return BERSERKER_MOD_ASSETS_FOLDER + "/" + path;
+  }
+  
+  public static final String makeCardPath(String path) {
+    return BERSERKER_MOD_ASSETS_FOLDER + "/cards/" + path;
+  }
+  
+  public static final Texture makePowerTexture(String path) {
+    return new Texture(BERSERKER_MOD_ASSETS_FOLDER + "/powers/" + path); 
+  }
+  
+  public static final Texture getPlaceholderPowerTexture() {
+    return new Texture(BERSERKER_MOD_ASSETS_FOLDER + "/powers/placeholderPower32.png");
   }
 
   @Override
