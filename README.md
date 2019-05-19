@@ -2,4 +2,4 @@
 
 A WIP StS mod
 
-Currently adds 1 character and 10 cards.
+Currently adds 1 character and 12 cards.
