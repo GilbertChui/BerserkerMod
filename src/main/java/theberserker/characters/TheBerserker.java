@@ -31,7 +31,7 @@ public class TheBerserker extends CustomPlayer {
   public static final String THE_BERSERKER_SHOULDER_2 =
       "img/char/theBerserker/theBerserkerShoulder2.png";
   public static final String THE_BERSERKER_SHOULDER_1 =
-      "img/char/theBerserker/theBerserkerShoulder1.png";
+      "img/char/theBerserker/theBerserkerShoulder.png";
   public static final String THE_BERSERKER_CORPSE = "img/char/theBerserker/theBerserkerCorpse.png";
   // public static final String THE_BERSERKER_SKELETON_ATLAS = "";
   // public static final String THE_BERSERKER_SKELETON_JSON = "";
@@ -69,7 +69,7 @@ public class TheBerserker extends CustomPlayer {
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
-    deck.add("theBerserker:Regeneration");
+    deck.add("theBerserker:WhirlwindOfDeath");
     return deck;
   }
 

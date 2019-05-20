@@ -3,7 +3,7 @@ package theberserker.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Dazed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +37,7 @@ public class Panic extends CustomCard{
   public void use(AbstractPlayer p, AbstractMonster m) {
     //TODO: FIGURE OUT HOW TO ADD WOUNDS TO DRAW PILE
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
-    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Dazed(), DAZED, true, true));
+    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Wound(), DAZED, true, true));
     //AbstractDungeon.actionManager.addToBottom();
     //TODO: UPDATE ModTheSpire.json after
   }

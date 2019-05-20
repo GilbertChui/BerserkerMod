@@ -18,7 +18,7 @@ public class WhirlwindOfDeathPower extends AbstractPower {
   // TODO: make PowerStrings.json for this power
   public static final String POWER_ID = "WhirlwindOfDeathPower";
   public static final String NAME = "Whirlwind of Death";
-  public static final String[] DESCRIPTIONS = new String[] {"Deal 6 damage to all enemies when you play a card."};
+  public static final String[] DESCRIPTIONS = new String[] {"Deal 6 damage per card played this turn to all enemies when you play a card."};
  
   public WhirlwindOfDeathPower(final AbstractCreature owner, int amount) {
     this.name = NAME;
@@ -31,13 +31,17 @@ public class WhirlwindOfDeathPower extends AbstractPower {
   
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    this.flash();
-    AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-    AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
-    for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-      AbstractDungeon.actionManager
-          .addToBottom(new DamageAction(mo, new DamageInfo(this.owner, this.amount),
-              AbstractGameAction.AttackEffect.NONE));
+    int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+    for (int i = 0; i <= cardsPlayed; i++) {
+      this.flash();
+      AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+      AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
+      for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+        AbstractDungeon.actionManager
+        .addToBottom(new DamageAction(mo, new DamageInfo(this.owner, this.amount),
+            AbstractGameAction.AttackEffect.NONE));
+      
+      }
     }
     
   }
