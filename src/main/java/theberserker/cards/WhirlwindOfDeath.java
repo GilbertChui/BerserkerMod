@@ -18,7 +18,7 @@ public class WhirlwindOfDeath extends CustomCard{
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
-  public static final int DAMAGE = 6;
+  public static final int DAMAGE = 4;
   private static final int COST = 3;
 
   public WhirlwindOfDeath() {

@@ -38,13 +38,16 @@
 	},
 	"theBerserker:Revenge":{
 		"NAME":"Revenge",
-		"DESCRIPTION": "Deal damage equal to life lost this combat",
-		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
+		"DESCRIPTION": "Deal damage equal to damage taken this combat",
+		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of damage taken this combat"
 	},
 	"theBerserker:WhirlwindOfDeath":{
 		"NAME":"Whirlwind Of Death",
-		"DESCRIPTION": "DOES SOMETHING",
-		"UPGRADE_DESCRIPTION":"Deal damage equal to double the amount of life lost this combat"
+		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
+	},
+	"theBerserker:Axetion":{
+	"NAME":"Axetion",
+	"DESCRIPTION":"Gain !D! Regen. Gain !D! Energy. Lose !M! health."
 	},
 	"theBerserker:TestCard":{
 	"NAME":"TestCard",

@@ -41,9 +41,7 @@ public class GreaterCleave extends CustomCard{
   
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    //TODO: fix this.
-    //p, this.damage, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-    //AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, false
+
     AbstractDungeon.actionManager
         .addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageType, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     AbstractDungeon.actionManager

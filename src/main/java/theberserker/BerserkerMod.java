@@ -104,6 +104,7 @@ public class BerserkerMod
     //Common
     BaseMod.addCard(new GreaterCleave());
     BaseMod.addCard(new Rampage());
+    BaseMod.addCard(new Axetion());
     
     //Uncommon
     BaseMod.addCard(new NoPainNoGain());

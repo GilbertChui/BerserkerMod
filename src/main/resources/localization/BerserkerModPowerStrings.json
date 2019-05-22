@@ -1,0 +1,6 @@
+{
+"theBerserker:WhirlwindOfDeathPower": {
+        "NAME": "Whirlwind of Death",
+        "DESCRIPTIONS": ["Deal", "  damage per card played this turn to all enemies when you play a card."]
+}
+}
