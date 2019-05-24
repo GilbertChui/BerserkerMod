@@ -17,7 +17,7 @@ import static theberserker.BerserkerMod.getPlaceholderPowerTexture;;
 
 public class WhirlwindOfDeathPower extends AbstractPower {
   
-  // TODO: make PowerStrings.json for this power
+
   public static final String POWER_ID = "theBerserker:WhirlwindOfDeathPower";
   public static final PowerStrings powerString = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
   public static final String NAME = powerString.NAME;
@@ -39,7 +39,7 @@ public class WhirlwindOfDeathPower extends AbstractPower {
   
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size() + 1;
+    int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
     for (int i = 0; i <= cardsPlayed; i++) {
       this.flash();
       AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));

@@ -17,6 +17,7 @@ public class Regeneration extends CustomCard {
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
+  public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
   private static final int REGEN_AMT = 3;
 
@@ -33,6 +34,7 @@ public class Regeneration extends CustomCard {
     if (!this.upgraded) {
       this.upgradeName();
       this.exhaust = false;
+      this.rawDescription = UPGRADED_DESCRIPTION;
     }
   }
 

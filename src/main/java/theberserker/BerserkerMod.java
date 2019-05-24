@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import basemod.BaseMod;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
@@ -69,6 +70,8 @@ public class BerserkerMod
     logger.info("adding card strings for " + TheBerserkerEnum.THE_BERSERKER.toString());
     String cardStrings = Gdx.files.internal("localization/BerserkerModCardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
     BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+    String powerStrings = Gdx.files.internal("localization/BerserkerModPowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+    BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
     
     logger.info("finished editting strings");
   }

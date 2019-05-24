@@ -31,6 +31,7 @@ public class WhirlwindOfDeath extends CustomCard{
   @Override
   public void upgrade() {
     if (!this.upgraded) {
+      this.upgradeMagicNumber(2);
       this.upgradeName();
       this.rawDescription = UPGRADED_DESCRIPTION;
       initializeDescription();
@@ -40,7 +41,7 @@ public class WhirlwindOfDeath extends CustomCard{
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    //TODO: make thsi work with strength buffs. also test this garbage.
+
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WhirlwindOfDeathPower(p, this.magicNumber), this.magicNumber));
   }
 

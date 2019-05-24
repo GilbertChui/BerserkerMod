@@ -33,7 +33,7 @@ public class Revenge extends CustomCard{
   public void upgrade() {
     if (!this.upgraded) {
       this.upgradeName();
-      this.updateCost(1);
+      this.updateCost(-1);
       this.rawDescription = UPGRADED_DESCRIPTION;
       initializeDescription();
     }

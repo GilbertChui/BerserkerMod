@@ -5,7 +5,8 @@
 	},
 	"theBerserker:Regeneration": {
 		"NAME": "Regeneration",
-		"DESCRIPTION": "Gain !M! Regen. Exhaust"
+		"DESCRIPTION": "Gain !M! Regen. Exhaust",
+		"UPGRADE_DESCRIPTION": "Gain !M! Regen."
 	},
 	"theBerserker:RecklessCleave":{
 		"NAME":"Reckless Cleave",
@@ -43,7 +44,8 @@
 	},
 	"theBerserker:WhirlwindOfDeath":{
 		"NAME":"Whirlwind Of Death",
-		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
+		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn.",
+		"UPGRADE_DESCRIPTION":"Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
 	},
 	"theBerserker:Axetion":{
 	"NAME":"Axetion",
