@@ -12,7 +12,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 import theberserker.powers.WhirlwindOfDeathPower;
 
-public class WhirlwindOfDeath extends CustomCard{
+public class WhirlwindOfDeath extends CustomCard {
   public static final String ID = "theBerserker:WhirlwindOfDeath";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
@@ -35,14 +35,15 @@ public class WhirlwindOfDeath extends CustomCard{
       this.upgradeName();
       this.rawDescription = UPGRADED_DESCRIPTION;
       initializeDescription();
-      
+
     }
   }
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
 
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WhirlwindOfDeathPower(p, this.magicNumber), this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        new WhirlwindOfDeathPower(p, this.magicNumber), this.magicNumber));
   }
 
   @Override

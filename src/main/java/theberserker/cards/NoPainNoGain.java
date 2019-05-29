@@ -23,16 +23,15 @@ public class NoPainNoGain extends CustomCard {
   private static final int DRAW = 2;
   private static final int SELF_DMG = 5;
 
-  
+
   public NoPainNoGain() {
-    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON,
-        AbstractCard.CardTarget.SELF);
-    
+    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+
     this.magicNumber = this.baseMagicNumber = DRAW;
-    //this.exhaust = true;
+    // this.exhaust = true;
   }
-  
+
   @Override
   public void upgrade() {
     if (!this.upgraded) {
@@ -40,16 +39,14 @@ public class NoPainNoGain extends CustomCard {
       this.updateCost(UPGRADE_COST);
     }
   }
-  
+
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager
-        .addToBottom(new DrawCardAction(p, magicNumber));
-    AbstractDungeon.actionManager
-    .addToBottom(new LoseHPAction(p, p, SELF_DMG));
+    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+    AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, SELF_DMG));
 
   }
-  
+
   @Override
   public AbstractCard makeCopy() {
     return new NoPainNoGain();

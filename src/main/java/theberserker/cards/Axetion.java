@@ -37,8 +37,7 @@ public class Axetion extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager
     .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.damage), this.damage));
-    AbstractDungeon.actionManager
-    .addToBottom(new GainEnergyAction(damage));
+    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(damage));
     AbstractDungeon.actionManager
     .addToBottom(new LoseHPAction(p, p, this.magicNumber));
   }

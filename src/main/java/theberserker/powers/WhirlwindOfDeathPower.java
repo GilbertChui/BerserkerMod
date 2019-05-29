@@ -16,13 +16,14 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import static theberserker.BerserkerMod.getPlaceholderPowerTexture;;
 
 public class WhirlwindOfDeathPower extends AbstractPower {
-  
+
 
   public static final String POWER_ID = "theBerserker:WhirlwindOfDeathPower";
-  public static final PowerStrings powerString = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+  public static final PowerStrings powerString =
+      CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
   public static final String NAME = powerString.NAME;
   public static final String[] DESCRIPTIONS = powerString.DESCRIPTIONS;
- 
+
   public WhirlwindOfDeathPower(final AbstractCreature owner, int amount) {
     this.name = NAME;
     this.ID = POWER_ID;
@@ -32,26 +33,27 @@ public class WhirlwindOfDeathPower extends AbstractPower {
     this.img = getPlaceholderPowerTexture();
     this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
   }
-  
+
   public void upgradeDescription() {
     this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
   }
-  
+
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
+    // TODO: make this work with strength
     int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
     for (int i = 0; i <= cardsPlayed; i++) {
       this.flash();
       AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-      AbstractDungeon.actionManager.addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
+      AbstractDungeon.actionManager
+          .addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
       for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-        AbstractDungeon.actionManager
-        .addToBottom(new DamageAction(mo, new DamageInfo(this.owner, this.amount),
-            AbstractGameAction.AttackEffect.NONE));
-      
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
+            new DamageInfo(this.owner, this.amount), AbstractGameAction.AttackEffect.NONE));
+
       }
     }
-    
+
   }
-    
+
 }

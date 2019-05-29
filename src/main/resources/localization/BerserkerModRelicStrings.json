@@ -1,0 +1,7 @@
+{
+"theBerserker:Rock": {
+        "NAME": "THE ROCK",
+        "DESCRIPTIONS": ["At the start of each turn if you are below half health gain one energy."],
+        "FLAVOR": "CAN YOU SMELLLL WHAT THE ROCK IS COOKIN?"
+}
+}

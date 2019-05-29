@@ -14,42 +14,44 @@ import basemod.abstracts.CustomCard;
 import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
-public class Panic extends CustomCard{
-  
+public class Panic extends CustomCard {
+
   static final String ID = "theBerserker:Panic";
   public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  public static final int REGEN_AMT = 20;
+  public static final int REGEN_AMT = 15;
   public static final int UPGRADE_AMT = 5;
   public static final int DAZED = 5;
   public static final int COST = 3;
   public static final int UPGRADED_COST = 2;
-  
+
   public Panic() {
-    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.POWER,
+    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     this.baseMagicNumber = this.magicNumber = REGEN_AMT;
     this.exhaust = true;
   }
-  
+
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    //TODO: FIGURE OUT HOW TO ADD WOUNDS TO DRAW PILE
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
-    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Wound(), DAZED, true, true));
-    //AbstractDungeon.actionManager.addToBottom();
-    //TODO: UPDATE ModTheSpire.json after
+    // TODO: FIGURE OUT HOW TO ADD WOUNDS TO DRAW PILE
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
+    AbstractDungeon.actionManager
+        .addToBottom(new MakeTempCardInDrawPileAction(new Wound(), DAZED, true, true));
+    // AbstractDungeon.actionManager.addToBottom();
+    // TODO: UPDATE ModTheSpire.json after
   }
-  
+
   @Override
   public AbstractCard makeCopy() {
     return new Panic();
   }
-  
+
   @Override
   public void upgrade() {
-    if(!this.upgraded) {
+    if (!this.upgraded) {
       this.upgradeName();
       this.upgradeMagicNumber(UPGRADE_AMT);
       this.upgradeBaseCost(UPGRADED_COST);

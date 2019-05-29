@@ -17,8 +17,10 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import theberserker.cards.StrikeB;
 import theberserker.patches.AbstractCardEnum;
 import theberserker.patches.TheBerserkerEnum;
+import theberserker.relics.Rock;
 
 public class TheBerserker extends CustomPlayer {
 
@@ -76,13 +78,14 @@ public class TheBerserker extends CustomPlayer {
   public ArrayList<String> getStartingRelics() {
     // TODO: make rock relic
     ArrayList<String> relics = new ArrayList<>();
-    relics.add("ROCK");
-    UnlockTracker.markRelicAsSeen("ROCK");
+    relics.add(Rock.ID);
+
+    UnlockTracker.markRelicAsSeen(Rock.ID);
     return relics;
   }
 
   public CharSelectInfo getLoadout() {
-    return new CharSelectInfo("The Berserker", "ARRRRRRRRRRRRRRRRRG", STARTING_HP, MAX_HP, 0,
+    return new CharSelectInfo("The Berserker", "AAAAAAAAAAAAAAAAAAAAAA", STARTING_HP, MAX_HP, 0,
         STARTING_GOLD, HAND_SIZE, this, getStartingRelics(), getStartingDeck(), false);
 
   }
@@ -150,8 +153,7 @@ public class TheBerserker extends CustomPlayer {
 
   @Override
   public AbstractCard getStartCardForEvent() {
-    // TODO Auto-generated method stub
-    return null;
+    return new StrikeB();
   }
 
   @Override
