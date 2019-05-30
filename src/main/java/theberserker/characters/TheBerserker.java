@@ -67,7 +67,7 @@ public class TheBerserker extends CustomPlayer {
     deck.add("theBerserker:StrikeB");
     deck.add("theBerserker:StrikeB");
     deck.add("theBerserker:QuickFix");
-    deck.add("theBerserker:TestCard");
+    deck.add("theBerserker:JaxPremium");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
@@ -76,7 +76,7 @@ public class TheBerserker extends CustomPlayer {
   }
 
   public ArrayList<String> getStartingRelics() {
-    // TODO: make rock relic
+
     ArrayList<String> relics = new ArrayList<>();
     relics.add(Rock.ID);
 

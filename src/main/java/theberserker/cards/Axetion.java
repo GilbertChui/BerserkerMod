@@ -27,7 +27,6 @@ public class Axetion extends CustomCard {
   public Axetion() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-    this.baseDamage = this.damage = ORBS;
     this.baseMagicNumber = this.magicNumber = SELF_DMG;
     this.exhaust = true;
 
@@ -36,8 +35,8 @@ public class Axetion extends CustomCard {
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager
-    .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, this.damage), this.damage));
-    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(damage));
+    .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, ORBS), ORBS));
+    AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ORBS));
     AbstractDungeon.actionManager
     .addToBottom(new LoseHPAction(p, p, this.magicNumber));
   }

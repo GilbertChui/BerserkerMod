@@ -35,13 +35,11 @@ public class Panic extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    // TODO: FIGURE OUT HOW TO ADD WOUNDS TO DRAW PILE
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
     AbstractDungeon.actionManager
         .addToBottom(new MakeTempCardInDrawPileAction(new Wound(), DAZED, true, true));
-    // AbstractDungeon.actionManager.addToBottom();
-    // TODO: UPDATE ModTheSpire.json after
+
   }
 
   @Override

@@ -34,7 +34,8 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   private static final String SKILL_ORANGE = makePath("512/bg_skill_orange.png");
   private static final String POWER_ORANGE = makePath("512/bg_power_orange.png");
   private static final String ORB_ORANGE = makePath("512/card_orange_orb.png");
-
+  private static final String CARD_ENERGY_ORB = makePath("512/card_orange_orb.png");
+  
   private static final String ATTACK_ORANGE_PORTRAIT = makePath("1024/bg_attack_orange.png");
   private static final String SKILL_ORANGE_PORTRAIT = makePath("1024/bg_skill_orange.png");
   private static final String POWER_ORANGE_PORTRAIT = makePath("1024/bg_power_orange.png");
@@ -50,15 +51,12 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   public static final String PLACEHOLDER_ART = makePath("cards/placeholder.png");
 
   public BerserkerMod() {
-    // TODO: characters, character animations, cards, relics, keywords
-    // note: use savable if you want to save a value in a relic/card ie: like the
-    // pen nib
-    // Adding orange as a color
+
     BaseMod.subscribe(this);
     logger.info("creating color " + AbstractCardEnum.ORANGE.toString());
     BaseMod.addColor(AbstractCardEnum.ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE,
         ORANGE, ATTACK_ORANGE, SKILL_ORANGE, POWER_ORANGE, ORB_ORANGE, ATTACK_ORANGE_PORTRAIT,
-        SKILL_ORANGE_PORTRAIT, POWER_ORANGE_PORTRAIT, ORB_ORANGE_PORTRAIT);
+        SKILL_ORANGE_PORTRAIT, POWER_ORANGE_PORTRAIT, ORB_ORANGE_PORTRAIT,CARD_ENERGY_ORB);
   }
 
   public static void initialize() {
@@ -101,13 +99,21 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   @Override
   public void receiveEditRelics() {
     logger.info("Adding relics for " + TheBerserkerEnum.THE_BERSERKER.toString());
+    // starter relic
     BaseMod.addRelicToCustomPool(new Rock(), AbstractCardEnum.ORANGE);
+    
+    // common
+    
+    // uncommon
+    
+    // rare
   }
 
   @Override
   public void receiveEditCards() {
     logger.info("begin editting cards");
     logger.info("adding cards for " + TheBerserkerEnum.THE_BERSERKER.toString());
+    //TODO: fix bug which crashes game on card inspection
     // Basic Cards
     BaseMod.addCard(new StrikeB());
     BaseMod.addCard(new Regeneration());
@@ -125,6 +131,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new NoPainNoGain());
     BaseMod.addCard(new AxeAQuestion());
     BaseMod.addCard(new QuickFix());
+    BaseMod.addCard(new JaxPremium());
 
     // Rare
     BaseMod.addCard(new Panic());

@@ -35,6 +35,7 @@ public class Regeneration extends CustomCard {
       this.upgradeName();
       this.exhaust = false;
       this.rawDescription = UPGRADED_DESCRIPTION;
+      initializeDescription();
     }
   }
 

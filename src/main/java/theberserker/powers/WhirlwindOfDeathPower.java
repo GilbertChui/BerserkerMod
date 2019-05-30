@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import static theberserker.BerserkerMod.getPlaceholderPowerTexture;;
+import static theberserker.BerserkerMod.makePowerTexture;
 
 public class WhirlwindOfDeathPower extends AbstractPower {
 
@@ -30,7 +30,7 @@ public class WhirlwindOfDeathPower extends AbstractPower {
     this.owner = owner;
     this.amount = amount;
     this.type = AbstractPower.PowerType.BUFF;
-    this.img = getPlaceholderPowerTexture();
+    this.img = makePowerTexture("whirlwindOfDeath.png");
     this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
   }
 
@@ -40,9 +40,8 @@ public class WhirlwindOfDeathPower extends AbstractPower {
 
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
-    // TODO: make this work with strength
-    int cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-    for (int i = 0; i <= cardsPlayed; i++) {
+    int cardsPlayed = AbstractDungeon.player.cardsPlayedThisTurn;
+    for (int i = 0; i < cardsPlayed; i++) {
       this.flash();
       AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
       AbstractDungeon.actionManager
@@ -50,7 +49,6 @@ public class WhirlwindOfDeathPower extends AbstractPower {
       for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
             new DamageInfo(this.owner, this.amount), AbstractGameAction.AttackEffect.NONE));
-
       }
     }
 

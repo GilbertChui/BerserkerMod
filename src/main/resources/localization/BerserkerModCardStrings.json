@@ -20,6 +20,14 @@
 	"NAME":"RAMPAGE",
 	"DESCRIPTION":"Lose 3 HP. Draw a card. Deal !D! damage."
 	},
+	"theBerserker:Axetion":{
+	"NAME":"Axetion",
+	"DESCRIPTION":"Gain 2 Regen. Gain 2 Energy. Lose !M! health."
+	},
+	"theBerserker:JaxPremium":{
+	"NAME":"J.A.X Premium",
+	"DESCRIPTION":"Lose 5 Max HP. Draw 2 cards. Gain !M! Strength. Gain 2 Energy."
+	},
 	"theBerserker:QuickFix":{
 	"NAME":"Quick Fix",
 	"DESCRIPTION":"Gain !M! Regen. Shuffle 2 Wounds into your drawpile.",
@@ -46,10 +54,6 @@
 		"NAME":"Whirlwind Of Death",
 		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn.",
 		"UPGRADE_DESCRIPTION":"Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
-	},
-	"theBerserker:Axetion":{
-	"NAME":"Axetion",
-	"DESCRIPTION":"Gain !D! Regen. Gain !D! Energy. Lose !M! health."
 	},
 	"theBerserker:TestCard":{
 	"NAME":"TestCard",
