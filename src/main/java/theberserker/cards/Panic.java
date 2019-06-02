@@ -24,7 +24,7 @@ public class Panic extends CustomCard {
   public static final int UPGRADE_AMT = 5;
   public static final int DAZED = 5;
   public static final int COST = 3;
-  public static final int UPGRADED_COST = 2;
+  public static final int UPGRADED_COST = 1;
 
   public Panic() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,

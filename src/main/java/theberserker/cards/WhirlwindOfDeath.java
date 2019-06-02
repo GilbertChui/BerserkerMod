@@ -22,8 +22,9 @@ public class WhirlwindOfDeath extends CustomCard {
   private static final int COST = 3;
 
   public WhirlwindOfDeath() {
-    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.POWER,
-        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+    super(ID, NAME, BerserkerMod.makeCardPath("whirlwindofdeath.png"), COST, DESCRIPTION,
+        AbstractCard.CardType.POWER, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE,
+        AbstractCard.CardTarget.SELF);
     this.baseMagicNumber = this.magicNumber = DAMAGE;
 
   }

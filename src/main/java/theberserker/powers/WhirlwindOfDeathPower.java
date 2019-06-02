@@ -35,20 +35,33 @@ public class WhirlwindOfDeathPower extends AbstractPower {
   }
 
   public void upgradeDescription() {
+
     this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+
   }
 
   @Override
   public void onPlayCard(AbstractCard card, AbstractMonster m) {
+
     int cardsPlayed = AbstractDungeon.player.cardsPlayedThisTurn;
+    // get current strength
+    int currStrength = 0;
+    if (this.owner.hasPower("Strength")) {
+      currStrength = (this.owner.getPower("Strength")).amount;
+    }
+
     for (int i = 0; i < cardsPlayed; i++) {
       this.flash();
       AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+
       AbstractDungeon.actionManager
           .addToBottom(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
+
       for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo,
-            new DamageInfo(this.owner, this.amount), AbstractGameAction.AttackEffect.NONE));
+        // dmg all monsters in the room
+        AbstractDungeon.actionManager.addToBottom(
+            new DamageAction(mo, new DamageInfo(this.owner, this.amount + currStrength),
+                AbstractGameAction.AttackEffect.NONE));
       }
     }
 

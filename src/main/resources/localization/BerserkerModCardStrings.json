@@ -55,6 +55,11 @@
 		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn.",
 		"UPGRADE_DESCRIPTION":"Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
 	},
+	"theBerserker:Ritual":{
+		"NAME":"Ritual",
+		"DESCRIPTION":"Lose !M! HP. Gain 5 Max HP.",
+		"UPGRADE_DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Gain 1 Energy. Draw 1 card."
+	},
 	"theBerserker:TestCard":{
 	"NAME":"TestCard",
 	"DESCRIPTION":"for testing purposes only"
