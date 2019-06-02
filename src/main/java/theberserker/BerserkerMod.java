@@ -137,6 +137,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new Panic());
     BaseMod.addCard(new Revenge());
     BaseMod.addCard(new WhirlwindOfDeath());
+    BaseMod.addCard(new Ritual());
 
     logger.info("finished editting cards");
   }

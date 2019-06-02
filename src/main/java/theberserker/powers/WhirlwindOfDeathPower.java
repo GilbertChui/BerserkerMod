@@ -46,9 +46,11 @@ public class WhirlwindOfDeathPower extends AbstractPower {
     int cardsPlayed = AbstractDungeon.player.cardsPlayedThisTurn;
     // get current strength
     int currStrength = 0;
-    if (this.owner.hasPower("Strength")) {
-      currStrength = (this.owner.getPower("Strength")).amount;
-    }
+
+    // as it turns out with strength this is... too strong.
+    // if (this.owner.hasPower("Strength")) {
+    // currStrength = (this.owner.getPower("Strength")).amount;
+    // }
 
     for (int i = 0; i < cardsPlayed; i++) {
       this.flash();

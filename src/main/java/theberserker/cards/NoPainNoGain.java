@@ -19,7 +19,7 @@ public class NoPainNoGain extends CustomCard {
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   private static final int COST = 1;
-  private static final int UPGRADE_COST = -1;
+  private static final int UPGRADE_COST = 0;
   private static final int DRAW = 2;
   private static final int SELF_DMG = 5;
 
@@ -36,7 +36,7 @@ public class NoPainNoGain extends CustomCard {
   public void upgrade() {
     if (!this.upgraded) {
       this.upgradeName();
-      this.updateCost(UPGRADE_COST);
+      this.upgradeBaseCost(UPGRADE_COST);
     }
   }
 

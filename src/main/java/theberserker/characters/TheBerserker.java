@@ -66,12 +66,12 @@ public class TheBerserker extends CustomPlayer {
     deck.add("theBerserker:StrikeB");
     deck.add("theBerserker:StrikeB");
     deck.add("theBerserker:StrikeB");
-    deck.add("theBerserker:QuickFix");
-    deck.add("theBerserker:JaxPremium");
+    deck.add("theBerserker:StrikeB");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
-    deck.add("theBerserker:WhirlwindOfDeath");
+    deck.add("theBerserker:Regeneration");
+    deck.add("theBerserker:RecklessCleave");
     return deck;
   }
 

@@ -1,7 +1,7 @@
 package theberserker.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,8 +23,8 @@ public class Panic extends CustomCard {
   public static final int REGEN_AMT = 15;
   public static final int UPGRADE_AMT = 5;
   public static final int DAZED = 5;
-  public static final int COST = 3;
-  public static final int UPGRADED_COST = 1;
+  public static final int COST = 2;
+
 
   public Panic() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -38,7 +38,7 @@ public class Panic extends CustomCard {
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
     AbstractDungeon.actionManager
-        .addToBottom(new MakeTempCardInDrawPileAction(new Wound(), DAZED, true, true));
+        .addToBottom(new MakeTempCardInDiscardAction(new Wound(), DAZED));
 
   }
 
@@ -52,7 +52,7 @@ public class Panic extends CustomCard {
     if (!this.upgraded) {
       this.upgradeName();
       this.upgradeMagicNumber(UPGRADE_AMT);
-      this.upgradeBaseCost(UPGRADED_COST);
+
     }
   }
 }

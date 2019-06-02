@@ -43,7 +43,7 @@
 	},
 	"theBerserker:Panic":{
 		"NAME":"Panic",
-		"DESCRIPTION": "Shuffle 5 Dazed into your drawpile. Gain !M! Regen. Exhaust."
+		"DESCRIPTION": "Shuffle 5 Wound into your discard. Gain !M! Regen. Exhaust."
 	},
 	"theBerserker:Revenge":{
 		"NAME":"Revenge",
