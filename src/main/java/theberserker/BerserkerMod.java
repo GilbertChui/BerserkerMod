@@ -34,7 +34,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   private static final String SKILL_ORANGE = makePath("512/bg_skill_orange.png");
   private static final String POWER_ORANGE = makePath("512/bg_power_orange.png");
   private static final String ORB_ORANGE = makePath("512/card_orange_orb.png");
-  private static final String CARD_ENERGY_ORB = makePath("512/card_orange_orb.png");
+  private static final String CARD_ENERGY_ORB = makePath("512/card_orange_small_orb.png");
   
   private static final String ATTACK_ORANGE_PORTRAIT = makePath("1024/bg_attack_orange.png");
   private static final String SKILL_ORANGE_PORTRAIT = makePath("1024/bg_skill_orange.png");
@@ -53,7 +53,9 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   public BerserkerMod() {
 
     BaseMod.subscribe(this);
+    
     logger.info("creating color " + AbstractCardEnum.ORANGE.toString());
+    
     BaseMod.addColor(AbstractCardEnum.ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE,
         ORANGE, ATTACK_ORANGE, SKILL_ORANGE, POWER_ORANGE, ORB_ORANGE, ATTACK_ORANGE_PORTRAIT,
         SKILL_ORANGE_PORTRAIT, POWER_ORANGE_PORTRAIT, ORB_ORANGE_PORTRAIT,CARD_ENERGY_ORB);
@@ -65,8 +67,10 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
 
   @Override
   public void receiveEditStrings() {
+    
     logger.info("begin editting strings");
     logger.info("adding card strings for " + TheBerserkerEnum.THE_BERSERKER.toString());
+    
     String cardStrings = Gdx.files.internal("localization/BerserkerModCardStrings.json")
         .readString(String.valueOf(StandardCharsets.UTF_8));
     BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
@@ -126,6 +130,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new GreaterCleave());
     BaseMod.addCard(new Rampage());
     BaseMod.addCard(new Axetion());
+    BaseMod.addCard(new Medkit());
 
     // Uncommon
     BaseMod.addCard(new NoPainNoGain());

@@ -19,7 +19,7 @@ public class StrikeB extends CustomCard {
   private static final int ATTACK_DMG = 6;
   private static final int UPGRADE_PLUS_DMG = 2;
 
-  // TODO: make texture for orb n shit
+  //TODO: flag this as a strike
   public StrikeB() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);

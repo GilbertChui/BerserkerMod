@@ -2,7 +2,6 @@ package theberserker.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,7 +23,6 @@ public class Ritual extends CustomCard {
   public static final int COST = 0;
   public static final int SELF_DMG = 10;
   public static final int CARDDRAW = 1;
-  public static final int ENERGYGAIN = 1;
 
 
   public Ritual() {
@@ -44,7 +42,6 @@ public class Ritual extends CustomCard {
     
     if (this.upgraded) {
       AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, CARDDRAW));
-      AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGYGAIN));
     }
   }
 

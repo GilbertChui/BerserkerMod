@@ -24,7 +24,7 @@ public class JaxPremium extends CustomCard {
   public static final int PERMANANTHEALTHLOST = 5;
   public static final int STRENGTHGAIN = 3;
   public static final int CARDDRAW = 2;
-  public static final int ENERGYGAIN = 2;
+  public static final int ENERGYGAIN = 1;
 
   public JaxPremium() {
     super(ID, NAME, BerserkerMod.makeCardPath("jaxpremium.png"), COST, DESCRIPTION,
@@ -44,8 +44,11 @@ public class JaxPremium extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), this.magicNumber));
+    
     AbstractDungeon.player.decreaseMaxHealth(PERMANANTHEALTHLOST);
+    
     AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, CARDDRAW));
+    
     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGYGAIN));
 
   }

@@ -24,9 +24,13 @@
 	"NAME":"Axetion",
 	"DESCRIPTION":"Gain 2 Regen. Gain 2 Energy. Lose !M! health."
 	},
+	"theBerserker:Medkit": {
+		"NAME": "Medkit",
+		"DESCRIPTION": "Heal !M!"
+	},
 	"theBerserker:JaxPremium":{
 	"NAME":"J.A.X Premium",
-	"DESCRIPTION":"Lose 5 Max HP. Draw 2 cards. Gain !M! Strength. Gain 2 Energy."
+	"DESCRIPTION":"Lose 5 Max HP. Draw 2 cards. Gain !M! Strength. Gain 1 Energy."
 	},
 	"theBerserker:QuickFix":{
 	"NAME":"Quick Fix",
@@ -57,8 +61,8 @@
 	},
 	"theBerserker:Ritual":{
 		"NAME":"Ritual",
-		"DESCRIPTION":"Lose !M! HP. Gain 5 Max HP.",
-		"UPGRADE_DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Gain 1 Energy. Draw 1 card."
+		"DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Exhaust.",
+		"UPGRADE_DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Draw 1 card."
 	},
 	"theBerserker:TestCard":{
 	"NAME":"TestCard",
