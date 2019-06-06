@@ -24,42 +24,72 @@ public class Revenge extends CustomCard{
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
+  public static final String UPGRADE_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
   private static final int COST = 2;
   
   public Revenge() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-    this.damage = this.baseDamage = GameActionManager.damageReceivedThisCombat;
+    
+    this.baseDamage = 0;
   }
   
   @Override
   public void upgrade() {
     if (!this.upgraded) {
       this.upgradeName();
-      this.updateCost(-1);
-      this.rawDescription = UPGRADED_DESCRIPTION;
-      initializeDescription();
+      this.upgradeBaseCost(1);
     }
   }
   
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
     
-    this.damage = GameActionManager.damageReceivedThisCombat;
-    if(this.damage < 20) {
+    this.baseDamage = GameActionManager.damageReceivedThisCombat;
+    calculateCardDamage(m);
+    
+    if(this.damage < 40) {
       AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+      this.rawDescription = DESCRIPTION;
+      initializeDescription();
     }else {
       if (m != null) {
           AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
        }
-       AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+      AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
       AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+      this.rawDescription = DESCRIPTION;
+      initializeDescription();
     }
   }
   
   @Override
   public AbstractCard makeCopy() {
     return new Revenge();
+  }
+  
+  @Override
+  public void onMoveToDiscard() {
+    this.rawDescription = DESCRIPTION;
+    initializeDescription();
+  }
+  
+  @Override
+  public void calculateCardDamage(AbstractMonster m) {
+    super.calculateCardDamage(m);
+    
+    this.rawDescription = DESCRIPTION;
+    this.rawDescription += UPGRADE_DESCRIPTION;
+    initializeDescription();
+  }
+  
+  @Override
+  public void applyPowers() {
+    this.baseDamage = GameActionManager.damageReceivedThisCombat;
+    super.applyPowers();
+    
+    this.rawDescription = DESCRIPTION;
+    this.rawDescription += UPGRADE_DESCRIPTION;
+    initializeDescription();
   }
 }

@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Wound;
@@ -32,7 +31,7 @@ public class DoubleEdge extends CustomCard {
 
 
   public DoubleEdge() {
-    super(ID, NAME, BerserkerMod.makeCardPath("jaxpremium.png"), COST, DESCRIPTION,
+    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION,
         AbstractCard.CardType.SKILL, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.ENEMY);
 

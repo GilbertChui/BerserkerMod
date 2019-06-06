@@ -38,7 +38,7 @@ public class Sacrifice extends CustomCard {
   @Override
   public void use(AbstractPlayer p, AbstractMonster m){
 
-    AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, EXHAUST, true, false));
+    AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, EXHAUST, true, true, true));
  
     AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, CARDDRAW));
 

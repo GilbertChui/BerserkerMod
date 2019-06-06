@@ -20,13 +20,14 @@ public class Regeneration extends CustomCard {
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
-  private static final int REGEN_AMT = 3;
+  private static final int REGEN_AMT = 1;
+  private static final int HEAL = 3;
 
   public Regeneration() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 
-    this.magicNumber = this.baseMagicNumber = REGEN_AMT;
+    this.magicNumber = this.baseMagicNumber = HEAL;
     this.exhaust = true;
   }
 
@@ -43,7 +44,8 @@ public class Regeneration extends CustomCard {
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager
-        .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, magicNumber), this.magicNumber));
+        .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, REGEN_AMT), REGEN_AMT));
+    AbstractDungeon.player.heal(this.magicNumber);
 
   }
 

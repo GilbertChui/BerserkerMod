@@ -71,7 +71,7 @@ public class TheBerserker extends CustomPlayer {
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
-    deck.add("theBerserker:RecklessCleave");
+    deck.add("theBerserker:Revenge");
     return deck;
   }
 

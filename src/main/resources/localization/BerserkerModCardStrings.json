@@ -5,8 +5,8 @@
 	},
 	"theBerserker:Regeneration": {
 		"NAME": "Regeneration",
-		"DESCRIPTION": "Gain !M! Regen. Exhaust",
-		"UPGRADE_DESCRIPTION": "Gain !M! Regen."
+		"DESCRIPTION": "Heal !M!. Gain 1 Regen. Exhaust",
+		"UPGRADE_DESCRIPTION":"Heal !M!. Gain 1 Regen."
 	},
 	"theBerserker:RecklessCleave":{
 		"NAME":"Reckless Cleave",
@@ -30,7 +30,7 @@
 	},
 	"theBerserker:Medkit": {
 		"NAME": "Medkit",
-		"DESCRIPTION": "Heal !M!. Exhaust a card."
+		"DESCRIPTION": "Heal !M!. Exhaust up to 1 card."
 	},
 	"theBerserker:JaxPremium":{
 	"NAME":"J.A.X Premium",
@@ -53,12 +53,12 @@
 	},
 	"theBerserker:Panic":{
 		"NAME":"Panic",
-		"DESCRIPTION": "Shuffle 5 Wound into your discard. Gain !M! Regen."
+		"DESCRIPTION": "Shuffle 5 Wound into your discard. Gain !M! Regen. Heal !M!"
 	},
 	"theBerserker:Revenge":{
 		"NAME":"Revenge",
-		"DESCRIPTION": "Deal damage equal to damage taken this combat. !D!",
-		"UPGRADE_DESCRIPTION":"Deal damage equal to damage taken this combat. !D!"
+		"DESCRIPTION": "Deal damage equal to damage taken this combat.",
+		"UPGRADE_DESCRIPTION":" (Deals !D! damage.)"
 	},
 	"theBerserker:WhirlwindOfDeath":{
 		"NAME":"Whirlwind Of Death",

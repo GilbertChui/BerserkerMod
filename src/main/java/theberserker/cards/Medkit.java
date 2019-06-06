@@ -43,7 +43,7 @@ public class Medkit extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
 
     AbstractDungeon.player.heal(this.magicNumber);
-    AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, EXHAUST, true, false));
+    AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, EXHAUST, false, true, true));
 
   }
 

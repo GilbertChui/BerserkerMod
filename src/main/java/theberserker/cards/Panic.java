@@ -20,8 +20,8 @@ public class Panic extends CustomCard {
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  private static final int REGEN_AMT = 15;
-  private static final int UPGRADE_AMT = 5;
+  private static final int REGEN_AMT = 9;
+  private static final int UPGRADE_AMT = 3;
   private static final int DAZED = 5;
   private static final int COST = 2;
 
@@ -34,6 +34,7 @@ public class Panic extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.player.heal(this.magicNumber);
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
     AbstractDungeon.actionManager
