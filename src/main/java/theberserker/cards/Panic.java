@@ -16,21 +16,20 @@ import theberserker.patches.AbstractCardEnum;
 
 public class Panic extends CustomCard {
 
-  static final String ID = "theBerserker:Panic";
-  public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String ID = "theBerserker:Panic";
+  private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  public static final int REGEN_AMT = 15;
-  public static final int UPGRADE_AMT = 5;
-  public static final int DAZED = 5;
-  public static final int COST = 2;
+  private static final int REGEN_AMT = 15;
+  private static final int UPGRADE_AMT = 5;
+  private static final int DAZED = 5;
+  private static final int COST = 2;
 
 
   public Panic() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     this.baseMagicNumber = this.magicNumber = REGEN_AMT;
-    this.exhaust = true;
   }
 
   @Override

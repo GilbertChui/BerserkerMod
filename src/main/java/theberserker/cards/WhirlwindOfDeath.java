@@ -13,12 +13,13 @@ import theberserker.patches.AbstractCardEnum;
 import theberserker.powers.WhirlwindOfDeathPower;
 
 public class WhirlwindOfDeath extends CustomCard {
+  
   public static final String ID = "theBerserker:WhirlwindOfDeath";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
-  public static final int DAMAGE = 2;
+  private static final int DAMAGE = 2;
   private static final int COST = 3;
 
   public WhirlwindOfDeath() {

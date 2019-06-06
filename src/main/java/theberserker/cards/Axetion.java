@@ -22,8 +22,8 @@ public class Axetion extends CustomCard {
   public static final int COST = 1;
   public static final int ORBS = 2;
   public static final int SELF_DMG = 5;
-  
-  
+
+
   public Axetion() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
@@ -31,24 +31,23 @@ public class Axetion extends CustomCard {
     this.exhaust = true;
 
   }
-  
+
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager
-    .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, ORBS), ORBS));
+        .addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, ORBS), ORBS));
     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ORBS));
-    AbstractDungeon.actionManager
-    .addToBottom(new LoseHPAction(p, p, this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber));
   }
-  
+
   @Override
   public AbstractCard makeCopy() {
     return new Axetion();
   }
-  
+
   @Override
   public void upgrade() {
-    if(!this.upgraded) {
+    if (!this.upgraded) {
       this.upgradeName();
       this.upgradeMagicNumber(-SELF_DMG);;
 

@@ -15,6 +15,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class QuickFix extends CustomCard{
+  
   public static final String ID = "theBerserker:QuickFix";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;

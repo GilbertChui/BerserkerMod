@@ -13,6 +13,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class Regeneration extends CustomCard {
+  
   public static final String ID = "theBerserker:Regeneration";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;

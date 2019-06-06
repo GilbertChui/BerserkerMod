@@ -1,5 +1,6 @@
 package theberserker.cards;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +12,7 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class Medkit extends CustomCard {
+  
   public static final String ID = "theBerserker:Medkit";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
@@ -18,6 +20,7 @@ public class Medkit extends CustomCard {
   private static final int COST = 2;
   private static final int HEAL = 12;
   private static final int UPGRADE_HEAL = 3;
+  private static final int EXHAUST = 1;
 
 
   public Medkit() {
@@ -25,7 +28,7 @@ public class Medkit extends CustomCard {
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 
     this.magicNumber = this.baseMagicNumber = HEAL;
-    // this.exhaust = true;
+   
   }
 
   @Override
@@ -38,8 +41,9 @@ public class Medkit extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
-    
+
     AbstractDungeon.player.heal(this.magicNumber);
+    AbstractDungeon.actionManager.addToBottom(new ExhaustAction(p, p, EXHAUST, true, false));
 
   }
 
@@ -47,5 +51,5 @@ public class Medkit extends CustomCard {
   public AbstractCard makeCopy() {
     return new Medkit();
   }
-  
+
 }

@@ -15,23 +15,25 @@ import theberserker.patches.AbstractCardEnum;
 
 public class AxeAQuestion extends CustomCard {
   public static final String ID = "theBerserker:AxeAQuestion";
-  private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
-  private static final String NAME = cardString.NAME;
+  public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String NAME = cardString.NAME;
   private static final int COST = 1;
   private static final int DEBUFF_AMT = 2;
   private static final int UPGRADE_DEBUFF = 1;
-  public static final String DESCRIPTION = cardString.DESCRIPTION;
-  
-  public AxeAQuestion(){
-    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+  private static final String DESCRIPTION = cardString.DESCRIPTION;
+
+  public AxeAQuestion() {
+    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
     this.baseMagicNumber = this.magicNumber = DEBUFF_AMT;
   }
-  
+
   @Override
-  public void use( AbstractPlayer p, AbstractMonster m) {
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m ,this.magicNumber, false), this.magicNumber));
-    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m ,this.magicNumber, true), this.magicNumber));
+  public void use(AbstractPlayer p, AbstractMonster m) {
+    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+        new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+    AbstractDungeon.actionManager.addToBottom(
+        new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, true), this.magicNumber));
   }
 
   @Override
@@ -40,9 +42,9 @@ public class AxeAQuestion extends CustomCard {
       this.upgradeName();
       this.upgradeMagicNumber(UPGRADE_DEBUFF);
     }
-    
+
   }
-  
+
   @Override
   public AbstractCard makeCopy() {
     return new AxeAQuestion();

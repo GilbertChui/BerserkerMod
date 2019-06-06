@@ -15,18 +15,19 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class Ritual extends CustomCard {
-  static final String ID = "theBerserker:Ritual";
-  public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
+  
+  public static final String ID = "theBerserker:Ritual";
+  private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   public static final String UPGRADE_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
-  public static final int COST = 0;
-  public static final int SELF_DMG = 10;
-  public static final int CARDDRAW = 1;
+  private static final int COST = 0;
+  private static final int SELF_DMG = 15;
+  private static final int CARDDRAW = 1;
 
 
   public Ritual() {
-    super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+    super(ID, NAME, BerserkerMod.makeCardPath("ritual.png"), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
     this.baseMagicNumber = this.magicNumber = SELF_DMG;
     this.exhaust = true;

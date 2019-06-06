@@ -51,6 +51,15 @@ public class WhirlwindOfDeathPower extends AbstractPower {
     // if (this.owner.hasPower("Strength")) {
     // currStrength = (this.owner.getPower("Strength")).amount;
     // }
+    
+    // ideas to nerf:
+    // cap it at 3
+    //if (cardsPlayed > 3) {
+      //cardsPlayed = 3;
+    //}
+    // del self dmg with every dmg instance
+    // only dmg if attack cards are played
+    
 
     for (int i = 0; i < cardsPlayed; i++) {
       this.flash();

@@ -16,15 +16,15 @@ import theberserker.patches.AbstractCardEnum;
 
 public class JaxPremium extends CustomCard {
 
-  static final String ID = "theBerserker:JaxPremium";
-  public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
+  public static final String ID = "theBerserker:JaxPremium";
+  private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  public static final int COST = 0;
-  public static final int PERMANANTHEALTHLOST = 5;
-  public static final int STRENGTHGAIN = 3;
-  public static final int CARDDRAW = 2;
-  public static final int ENERGYGAIN = 1;
+  private static final int COST = 0;
+  private static final int PERMANANTHEALTHLOST = 5;
+  private static final int STRENGTHGAIN = 3;
+  private static final int CARDDRAW = 2;
+  private static final int ENERGYGAIN = 1;
 
   public JaxPremium() {
     super(ID, NAME, BerserkerMod.makeCardPath("jaxpremium.png"), COST, DESCRIPTION,
@@ -44,11 +44,11 @@ public class JaxPremium extends CustomCard {
   public void use(AbstractPlayer p, AbstractMonster m) {
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), this.magicNumber));
-    
+
     AbstractDungeon.player.decreaseMaxHealth(PERMANANTHEALTHLOST);
-    
+
     AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, CARDDRAW));
-    
+
     AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGYGAIN));
 
   }

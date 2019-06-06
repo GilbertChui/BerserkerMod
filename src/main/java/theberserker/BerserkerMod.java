@@ -117,7 +117,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
   public void receiveEditCards() {
     logger.info("begin editting cards");
     logger.info("adding cards for " + TheBerserkerEnum.THE_BERSERKER.toString());
-    //TODO: fix bug which crashes game on card inspection
+
     // Basic Cards
     BaseMod.addCard(new StrikeB());
     BaseMod.addCard(new Regeneration());
@@ -127,22 +127,32 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new TestCard());
 
     // Common
+    //attacks
     BaseMod.addCard(new GreaterCleave());
     BaseMod.addCard(new Rampage());
+    //skills
     BaseMod.addCard(new Axetion());
     BaseMod.addCard(new Medkit());
+    BaseMod.addCard(new AxeAQuestion());
 
     // Uncommon
+    //attacks
+    BaseMod.addCard(new DoubleEdge());
+    //skills
     BaseMod.addCard(new NoPainNoGain());
-    BaseMod.addCard(new AxeAQuestion());
     BaseMod.addCard(new QuickFix());
     BaseMod.addCard(new JaxPremium());
+    BaseMod.addCard(new Sacrifice());
 
     // Rare
-    BaseMod.addCard(new Panic());
+    //attacks
     BaseMod.addCard(new Revenge());
-    BaseMod.addCard(new WhirlwindOfDeath());
+    //skills
+    BaseMod.addCard(new Panic());
     BaseMod.addCard(new Ritual());
+    //powers
+    BaseMod.addCard(new WhirlwindOfDeath());
+
 
     logger.info("finished editting cards");
   }

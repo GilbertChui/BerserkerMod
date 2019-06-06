@@ -13,7 +13,7 @@ import basemod.abstracts.CustomCard;
 import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
-public class GreaterCleave extends CustomCard{
+public class GreaterCleave extends CustomCard {
   public static final String ID = "theBerserker:GreaterCleave";
   private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
@@ -21,7 +21,7 @@ public class GreaterCleave extends CustomCard{
   private static final int COST = 1;
   private static final int ATTACK_DMG = 4;
   private static final int UPGRADE_PLUS_DMG = 2;
-  
+
   public GreaterCleave() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
@@ -29,7 +29,7 @@ public class GreaterCleave extends CustomCard{
     this.damageType = DamageInfo.DamageType.NORMAL;
     this.isMultiDamage = true;
   }
-  
+
   @Override
   public void upgrade() {
     if (!this.upgraded) {
@@ -38,16 +38,16 @@ public class GreaterCleave extends CustomCard{
     }
 
   }
-  
+
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
 
-    AbstractDungeon.actionManager
-        .addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageType, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-    AbstractDungeon.actionManager
-        .addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageType, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageType,
+        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+    AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, multiDamage, damageType,
+        AbstractGameAction.AttackEffect.SLASH_VERTICAL));
   }
-  
+
   @Override
   public AbstractCard makeCopy() {
     return new GreaterCleave();

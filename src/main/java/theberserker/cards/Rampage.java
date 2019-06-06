@@ -17,14 +17,15 @@ import theberserker.BerserkerMod;
 import theberserker.patches.AbstractCardEnum;
 
 public class Rampage extends CustomCard{
+  
   public static final String ID = "theBerserker:Rampage";
-  public static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
+  private static final CardStrings cardString = CardCrawlGame.languagePack.getCardStrings(ID);
   public static final String NAME = cardString.NAME;
   public static final String DESCRIPTION = cardString.DESCRIPTION;
-  public static final int DAMAGE = 6;
-  public static final int UPGRADE_PLUS_DAMAGE = 2;
-  public static final int COST = 0;
-  public static final int SELF_DMG = 3;
+  private static final int DAMAGE = 6;
+  private static final int UPGRADE_PLUS_DAMAGE = 2;
+  private static final int COST = 0;
+  private static final int SELF_DMG = 3;
   
   public Rampage() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
