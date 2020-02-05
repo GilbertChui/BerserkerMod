@@ -33,7 +33,7 @@ public class WhirlwindOfDeath extends CustomCard {
   @Override
   public void upgrade() {
     if (!this.upgraded) {
-      this.upgradeMagicNumber(2);
+      this.upgradeMagicNumber(1);
       this.upgradeName();
       this.rawDescription = UPGRADED_DESCRIPTION;
       initializeDescription();

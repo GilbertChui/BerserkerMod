@@ -134,6 +134,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new Axetion());
     BaseMod.addCard(new Medkit());
     BaseMod.addCard(new AxeAQuestion());
+    //powers
 
     // Uncommon
     //attacks
@@ -143,6 +144,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new QuickFix());
     BaseMod.addCard(new JaxPremium());
     BaseMod.addCard(new Sacrifice());
+    //powers
 
     // Rare
     //attacks
@@ -152,6 +154,7 @@ public class BerserkerMod implements EditStringsSubscriber, EditCardsSubscriber,
     BaseMod.addCard(new Ritual());
     //powers
     BaseMod.addCard(new WhirlwindOfDeath());
+    BaseMod.addCard(new AllIn());
 
 
     logger.info("finished editting cards");

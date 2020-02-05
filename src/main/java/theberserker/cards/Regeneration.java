@@ -21,12 +21,12 @@ public class Regeneration extends CustomCard {
   public static final String UPGRADED_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
   private static final int COST = 1;
   private static final int REGEN_AMT = 1;
-  private static final int HEAL = 3;
+  private static final int HEAL = 4;
 
   public Regeneration() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.SKILL,
         AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
-
+    
     this.magicNumber = this.baseMagicNumber = HEAL;
     this.exhaust = true;
   }

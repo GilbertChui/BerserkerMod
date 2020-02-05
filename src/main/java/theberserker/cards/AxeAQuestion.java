@@ -30,8 +30,10 @@ public class AxeAQuestion extends CustomCard {
 
   @Override
   public void use(AbstractPlayer p, AbstractMonster m) {
+
     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
         new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+
     AbstractDungeon.actionManager.addToBottom(
         new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, true), this.magicNumber));
   }

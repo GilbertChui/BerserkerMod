@@ -34,7 +34,7 @@
 	},
 	"theBerserker:JaxPremium":{
 	"NAME":"J.A.X Premium",
-	"DESCRIPTION":"Lose 5 Max HP. Draw 2 cards. Gain !M! Strength. Gain 1 Energy."
+	"DESCRIPTION":"Lose 10 Max HP. Draw 2 cards. Gain !M! Strength. Gain 1 Energy."
 	},
 	"theBerserker:QuickFix":{
 	"NAME":"Quick Fix",
@@ -62,16 +62,20 @@
 	},
 	"theBerserker:WhirlwindOfDeath":{
 		"NAME":"Whirlwind Of Death",
-		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn.",
-		"UPGRADE_DESCRIPTION":"Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn."
+		"DESCRIPTION": "Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn. (Max 3)",
+		"UPGRADE_DESCRIPTION":"Whenever you play a card deal !M! damage to all enemies equal to the amount of cards played this turn. (Max 3)"
 	},
 	"theBerserker:Ritual":{
 		"NAME":"Ritual",
 		"DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Exhaust.",
 		"UPGRADE_DESCRIPTION":"Lose !M! HP. Gain 5 Max HP. Draw 1 card. Exhaust."
 	},
+	"theBerserker:AllIn":{
+		"NAME":"ALL IN",
+		"DESCRIPTION":"Shuffle 50 Wounds into your Discard. Gain !M! Strength."
+	},
 	"theBerserker:TestCard":{
-	"NAME":"TestCard",
-	"DESCRIPTION":"for testing purposes only"
+		"NAME":"TestCard",
+		"DESCRIPTION":"for testing purposes only"
 	}
 }

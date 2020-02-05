@@ -57,11 +57,16 @@ public class WhirlwindOfDeathPower extends AbstractPower {
     //if (cardsPlayed > 3) {
       //cardsPlayed = 3;
     //}
-    // del self dmg with every dmg instance
+    // deal self dmg with every dmg instance
     // only dmg if attack cards are played
     
+    // lets try this
+    if (cardsPlayed > 2) {
+      cardsPlayed = 2;
+    }
+    
 
-    for (int i = 0; i < cardsPlayed; i++) {
+    for (int i = 0; i <= cardsPlayed; i++) {
       this.flash();
       AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
 

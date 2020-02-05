@@ -27,12 +27,12 @@ public class DoubleEdge extends CustomCard {
   private static final int COST = 1;
   private static final int HEALTHLOST = 5;
   private static final int WOUNDS = 2;
-  private static final int DAMAGE = 20;
+  private static final int DAMAGE = 17;
 
 
   public DoubleEdge() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION,
-        AbstractCard.CardType.SKILL, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON,
+        AbstractCard.CardType.ATTACK, AbstractCardEnum.ORANGE, AbstractCard.CardRarity.UNCOMMON,
         AbstractCard.CardTarget.ENEMY);
 
     this.baseMagicNumber = this.magicNumber = HEALTHLOST;

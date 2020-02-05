@@ -27,7 +27,7 @@ public class TheBerserker extends CustomPlayer {
   public static final String NAME = "The Berserker";
   public static final int ENERGY_PER_TURN = 3;
   public static final int STARTING_HP = 110;
-  public static final int MAX_HP = 110;
+  public static final int MAX_HP = 100;
   public static final int STARTING_GOLD = 99;
   public static final int HAND_SIZE = 5;
   public static final String THE_BERSERKER_SHOULDER_2 =
@@ -71,7 +71,8 @@ public class TheBerserker extends CustomPlayer {
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
     deck.add("theBerserker:Regeneration");
-    deck.add("theBerserker:Revenge");
+    deck.add("theBerserker:RecklessCleave");
+    deck.add("theBerserker:WhirlwindOfDeath");
     return deck;
   }
 

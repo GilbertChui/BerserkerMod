@@ -25,7 +25,8 @@ public class TestCard extends CustomCard{
 
   public TestCard() {
     super(ID, NAME, BerserkerMod.PLACEHOLDER_ART, COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        AbstractCardEnum.ORANGE, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.ENEMY);
+    
     this.damage = this.baseDamage = ATTACK_DMG;
   }
 

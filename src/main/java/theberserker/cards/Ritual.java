@@ -22,7 +22,7 @@ public class Ritual extends CustomCard {
   public static final String DESCRIPTION = cardString.DESCRIPTION;
   public static final String UPGRADE_DESCRIPTION = cardString.UPGRADE_DESCRIPTION;
   private static final int COST = 0;
-  private static final int SELF_DMG = 15;
+  private static final int SELF_DMG = 20;
   private static final int CARDDRAW = 1;
 
 
